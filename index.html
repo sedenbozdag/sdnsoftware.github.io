@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SDN - Software Development</title>
+<title>SEDEN - Yazılım Geliştirme</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,8 +23,9 @@
           extend: {
             colors: {
               "primary": "#D4AF37",
-              "background-light": "#000000",
-              "background-dark": "#253745",
+              "background-light": "#f8f9fa",
+              "background-dark": "#05172F",
+              "contrast": "#2C3E50",
             },
             fontFamily: {
               "display": ["Poppins", "sans-serif"],
@@ -36,9 +37,9 @@
       }
     </script>
 </head>
-<body class="bg-background-dark font-display text-[#B0C4DE]">
+<body class="contrast font-display text-contrast/90">
 <div class="relative w-full flex flex-col">
-<header class="sticky top-0 z-50 w-full bg-background-dark/80 backdrop-blur-sm">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 backdrop-blur-sm">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
 <div class="flex items-center gap-3">
@@ -47,31 +48,31 @@
 <path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
 </svg>
 </div>
-<h2 class="text-[#F5F5F5] text-xl font-heading font-bold">SEDEN</h2>
+<a class="text-contrast text-xl font-heading font-bold" href ="#index.html">SEDEN</a>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-[#F5F5F5] text-sm font-medium hover:text-primary transition-colors duration-300" href="#about">About</a>
-<a class="text-[#F5F5F5] text-sm font-medium hover:text-primary transition-colors duration-300" href="#services">Services</a>
-<a class="text-[#F5F5F5] text-sm font-medium hover:text-primary transition-colors duration-300" href="#projects">Projects</a>
-<a class="text-[#F5F5F5] text-sm font-medium hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="#about">Hakkımda</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="#services">Servisler</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="#projects">Projeler</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="#contact">İletişim</a>
 </nav>
 </div>
 </div>
 </header>
 <main class="flex-grow">
 <section class="relative min-h-[75vh] md:min-h-[600px] flex items-center justify-center text-center py-20 px-4 sm:px-6 lg:px-8">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract golden geometric lines on a navy blue background" style='background-image: linear-gradient(rgba(5, 23, 47, 0.8) 0%, rgba(5, 23, 47, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA86Vy0_tdRtuS1N6QMQrsL97XDMEK4zEeSSpfZGLrKevilDkxtmqKprRyADwr4Aoi6Z4DpunJJDjlhlAJ_q6cqOOaAjLTxMx3MoKZJVlfc-kBonyHO7B7zF0KPmUL2JUGKl-h3f_0v-S4GceaBkozyqaDzVTbvYwGLMe0p4xxYsAhJiMqZvuZUPYOzxp49EO2--sVFW-gfb01THR2M7omvjiGu1sSpMpEVqwbHF1DyZ4WzFlmeiYNX5unP825owTbPLDp5acmSceM");'></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Subtle, modern digital-inspired graphic background" style='background-image: linear-gradient(rgba(248, 249, 250, 0.8) 0%, rgba(248, 249, 250, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0yg4uH4Lfa_j-zKQmSIeAo3x2giWooXMFJC7k21yOeTLNo00doVTl8-UlGDsU6eH6eUUmWxFChwpdyct7cXYdkg4rCfNbdhaOUNVVchH6YcfMBRVBfvHdt8OG6NtXMOrVVNsewYql58yuo45Y7pbeorjNxonmkQJszPxGYZ5xn75bd3ULY9m4mUoZ_I3FlWeu-CChFYJYsYGgXGwkKmYueD4KwgOvALSN9oBcD0x7imZ2rYMFQTvDED49bz0sCZn5lhJHcnR-Yjk");'></div>
 <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-6">
 <div class="flex flex-col gap-4">
-<h1 class="text-[#F5F5F5] text-4xl md:text-6xl font-heading font-bold leading-tight tracking-tight">Reliable and Innovative Software Solutions</h1>
-<p class="text-base md:text-lg max-w-2xl mx-auto">SDN empowers local brands with modern, secure, and sustainable digital solutions.</p>
+<h1 class="text-contrast text-4xl md:text-6xl font-heading font-bold leading-tight tracking-tight">Uygun ve Yenilikçi Yazılım Çözümleri</h1>
+<p class="text-base md:text-lg max-w-2xl mx-auto text-contrast/80">SEDEN Software, yerel markaları modern, güvenli ve sürdürülebilir dijital çözümlerle güçlendirir.</p>
 </div>
 <div class="flex flex-wrap gap-4 justify-center">
-<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-sm font-bold tracking-wide transition-transform duration-300 hover:scale-105">
-<span>Discover Projects</span>
+<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-sm font-bold tracking-wide transition-transform duration-300 hover:scale-105" href="#projects">
+<span>Projeleri keşfet.</span>
 </button>
-<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border-2 border-primary text-primary text-sm font-bold tracking-wide transition-colors duration-300 hover:bg-primary hover:text-background-dark">
-<span>Contact Us</span>
+<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border-2 border-primary text-primary text-sm font-bold tracking-wide transition-colors duration-300 hover:bg-primary hover:text-background-dark" href="#contact">
+<span>İletişim</span>
 </button>
 </div>
 </div>
@@ -79,45 +80,45 @@
 <section class="py-20 sm:py-24" id="about">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="max-w-3xl mx-auto text-center">
-<h2 class="text-3xl font-heading font-bold text-[#F5F5F5]">About SDN</h2>
-<p class="mt-4 text-base leading-relaxed">Born to simplify digital transformation for local brands, SDN combines reliability with innovation to build sustainable success stories.</p>
+<h2 class="text-3xl font-heading font-bold text-contrast">SEDEN Software Hakkında</h2>
+<p class="mt-4 text-base leading-relaxed text-contrast/80">Yerel markalar için dijital dönüşümü basitleştirmek için doğan SEDEN Software, sürdürülebilir başarı hikayeleri oluşturmak için güvenilirliği inovasyonla birleştirir.</p>
 </div>
 <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="flex flex-col items-center text-center p-6 border border-white/10 rounded-lg bg-white/5">
+<div class="flex flex-col items-center text-center p-6 border border-contrast/10 rounded-lg bg-white shadow-sm">
 <span class="material-symbols-outlined text-primary text-4xl mb-4">verified_user</span>
-<h3 class="text-xl font-heading font-bold text-[#F5F5F5]">Reliability</h3>
+<h3 class="text-xl font-heading font-bold text-contrast">Güvenilir</h3>
 </div>
-<div class="flex flex-col items-center text-center p-6 border border-white/10 rounded-lg bg-white/5">
+<div class="flex flex-col items-center text-center p-6 border border-contrast/10 rounded-lg bg-white shadow-sm">
 <span class="material-symbols-outlined text-primary text-4xl mb-4">lightbulb</span>
-<h3 class="text-xl font-heading font-bold text-[#F5F5F5]">Innovation</h3>
+<h3 class="text-xl font-heading font-bold text-contrast">Yenilikçi</h3>
 </div>
-<div class="flex flex-col items-center text-center p-6 border border-white/10 rounded-lg bg-white/5">
+<div class="flex flex-col items-center text-center p-6 border border-contrast/10 rounded-lg bg-white shadow-sm">
 <span class="material-symbols-outlined text-primary text-4xl mb-4">gesture</span>
-<h3 class="text-xl font-heading font-bold text-[#F5F5F5]">Simplicity</h3>
+<h3 class="text-xl font-heading font-bold text-contrast">Sadelik</h3>
 </div>
 </div>
 </div>
 </section>
-<section class="py-20 sm:py-24 bg-black/20" id="services">
+<section class="py-20 sm:py-24 bg-white" id="services">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="max-w-3xl mx-auto text-center mb-16">
-<h2 class="text-3xl font-heading font-bold text-[#F5F5F5]">Our Services</h2>
+<h2 class="text-3xl font-heading font-bold text-contrast">Servislerimiz</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative flex flex-col gap-4 p-8 rounded-lg bg-background-dark border-t-2 border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+<div class="group relative flex flex-col gap-4 p-8 rounded-lg bg-contrast text-white border-t-2 border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-contrast/20">
 <span class="material-symbols-outlined text-primary text-4xl">phone_iphone</span>
-<h3 class="text-xl font-heading font-bold text-[#F5F5F5]">Mobile App Development</h3>
-<p class="text-sm">iOS &amp; Android performance solutions, crafted for an exceptional user experience and robust functionality.</p>
+<h3 class="text-xl font-heading font-bold text-white">Mobil Uygulama Geliştirme</h3>
+<p class="text-sm text-white/80">iOS &amp; Android için iyi bir kullanıcı deneyimi ve sağlam işlevsellik ile hazırlanmış performans çözümleri.</p>
 </div>
-<div class="group relative flex flex-col gap-4 p-8 rounded-lg bg-background-dark border-t-2 border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+<div class="group relative flex flex-col gap-4 p-8 rounded-lg bg-contrast text-white border-t-2 border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-contrast/20">
 <span class="material-symbols-outlined text-primary text-4xl">dvr</span>
-<h3 class="text-xl font-heading font-bold text-[#F5F5F5]">Web Software</h3>
-<p class="text-sm">Scalable, secure, custom web applications designed to meet your unique business requirements and drive growth.</p>
+<h3 class="text-xl font-heading font-bold text-white">Web Yazılımı</h3>
+<p class="text-sm text-white/80">Benzersiz iş gereksinimlerinizi karşılamak ve büyümeyi artırmak için tasarlanmış ölçeklenebilir, güvenli, özel web uygulamaları.</p>
 </div>
-<div class="group relative flex flex-col gap-4 p-8 rounded-lg bg-background-dark border-t-2 border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+<div class="group relative flex flex-col gap-4 p-8 rounded-lg bg-contrast text-white border-t-2 border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-contrast/20">
 <span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
-<h3 class="text-xl font-heading font-bold text-[#F5F5F5]">Digital Transformation</h3>
-<p class="text-sm">Strategic consultancy and automation to modernize your operations and unlock new digital potentials.</p>
+<h3 class="text-xl font-heading font-bold text-white">Dijital Dönüşüm</h3>
+<p class="text-sm text-white/80">Operasyonlarınızı modernize etmek ve yeni dijital potansiyelleri ortaya çıkarmak için stratejik danışmanlık ve otomasyon.</p>
 </div>
 </div>
 </div>
@@ -125,68 +126,53 @@
 <section class="py-20 sm:py-24" id="projects">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="max-w-3xl mx-auto text-center mb-16">
-<h2 class="text-3xl font-heading font-bold text-[#F5F5F5]">Featured Projects</h2>
+<h2 class="text-3xl font-heading font-bold text-contrast">Projelerimiz</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="group relative flex flex-col bg-white/5 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/10">
-<a class="block" href="/project/e-commerce-platform" title="View project details for E-Commerce Platform">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Laptop and coffee on a wooden table, representing an e-commerce platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_n92dXnsD7_5xlsOGruCslOqWz1F4fYFWoIyjdu4lmVPogr-HKC-ERTuAIRQy0xEWJPMogKk8d5VmFjkNGH17aBxA90_ytLp_Bj0vtXGbyYQ7Ffwx6RpgaNTBYoXpTqcRnAtXSFf77ZXvYRkIinHLY-KLWb519bLbI5jV5zGwm0gU4OYX9dSR0lvzx0vhc39FxwC6lgwlb7H4Qw4Cxw9HdFlEy6MS_hRiAXK0Nt9S8sMmCCsQPWtOc6ba89624BGEVJukk-fntQI"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-contrast/20">
+<a class="block" href="project-details.html">
+<img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Laptop and coffee on a wooden table, representing an e-commerce platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_n92dXnsD7_5xlsOGruCslOqWz1F4fYFWoIyjdu4lmVPogr-HKC-ERTuAIRQy0xEWJPMogKk8d5VmFjkNGH17aBxA90_ytLp_Bj0vtXGbyYQ7Ffwx6RpgaNTBYoXpTqcRnAtXSFf77ZXvYRkIinHLY-KLWb519bLbI5jV5zGwm0gU4OYX9dSR0lvzx0vhc39FxwC6lgwlb7H4Qw4Cxw9HdFlEy6MS_hRiAXK0Nt9S8sMmCCsQPWtOc6ba89624BGEVJukk-fntQI"/>
 </a>
-<div class="p-6 flex-grow flex flex-col">
-<p class="text-xs uppercase tracking-wider font-semibold text-primary">Web Application</p>
-<h3 class="mt-2 text-lg font-heading font-bold text-[#F5F5F5]">
-<a class="hover:text-primary transition-colors" href="/project/e-commerce-platform">E-Commerce Platform</a>
-</h3>
-<p class="mt-1 text-sm text-white/70">Designed for a Local Retail Brand</p>
+<div class="p-6">
+<h3 class="text-xl font-heading font-bold text-contrast">E-Ticaret Platformu</h3>
+<p class="text-sm text-primary font-medium mt-1">Web Geliştirme</p>
+<p class="text-sm text-contrast/80 mt-2">Yerel Zanaatkar Butik</p>
 </div>
 </div>
-<div class="group relative flex flex-col bg-white/5 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/10">
-<a class="block" href="/project/corporate-cms-system" title="View project details for Corporate CMS System">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Team collaborating in a modern office, representing a corporate CMS system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmClqFIfpnWDvqUGRUUhD0zoTojpFnsDG2ZtnUy6vvPJDZ1cIUCp7DS_uWuSlNDvtSrmd2v9rEPAtV3BHQSpJSNC_K8XdxwNAydY1x2zYYDgIdi_6kYp4Yo2f438heBJZJ3Bp58nDuZTbUbXdGCfUhGamacMhsUVKMiTyGMunIXokep0KARE9iAjHLPoXjJrOKgdOClmBRlVO_pCJirvrwZ6i7JsoXA45sxE7NG6LDeIDmUuLZB8caWwWF1uTtcQkGe1HsjuXRyNw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-contrast/20">
+<a class="block" href="project-details.html">
+<img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Team collaborating in a modern office, representing a corporate CMS system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmClqFIfpnWDvqUGRUUhD0zoTojpFnsDG2ZtnUy6vvPJDZ1cIUCp7DS_uWuSlNDvtSrmd2v9rEPAtV3BHQSpJSNC_K8XdxwNAydY1x2zYYDgIdi_6kYp4Yo2f438heBJZJ3Bp58nDuZTbUbXdGCfUhGamacMhsUVKMiTyGMunIXokep0KARE9iAjHLPoXjJrOKgdOClmBRlVO_pCJirvrwZ6i7JsoXA45sxE7NG6LDeIDmUuLZB8caWwWF1uTtcQkGe1HsjuXRyNw"/>
 </a>
-<div class="p-6 flex-grow flex flex-col">
-<p class="text-xs uppercase tracking-wider font-semibold text-primary">CMS System</p>
-<h3 class="mt-2 text-lg font-heading font-bold text-[#F5F5F5]">
-<a class="hover:text-primary transition-colors" href="projects.html">Corporate CMS System</a>
-</h3>
-<p class="mt-1 text-sm text-white/70">Designed for a Financial Services Firm</p>
+<div class="p-6">
+<h3 class="text-xl font-heading font-bold text-contrast">Kurumsal CMS Sistemi</h3>
+<p class="text-sm text-primary font-medium mt-1">Kurumsal Yazılım</p>
+<p class="text-sm text-contrast/80 mt-2">Finansal Servis Firması</p>
 </div>
 </div>
-<div class="group relative flex flex-col bg-white/5 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/10">
-<a class="block" href="/project/mobile-loyalty-app" title="View project details for Mobile Loyalty App">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Mobile phone displaying a loyalty app interface on a colorful background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3mzkA_Yq9eorBNcfieismr5QJSoFlx02Sl2yv9KbUM5hblEybmQxSuEfQ8DfcSvzOhXkZ1KAvLdTLdLe3uq4DFCF8-MY9pwTSka_O_17kdaBqGhkq6VeHgfaOhjYU84ZeA3tFkFJh3jfPtWCtK0nWgdQCHViwuXVZUa9voj-ZnEIsSsNAm9Ge0gOSjPn5jXGi6prI3O_aCxF9UCWXwEHo3rnMFjT6ZuYmCNuxxbJevgFE-yjc23cYbXRKNk72VppUYGSPZ26EK8"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-contrast/20">
+<a class="block" href="project-details.html">
+<img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Mobile phone displaying a loyalty app interface on a colorful background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3mzkA_Yq9eorBNcfieismr5QJSoFlx02Sl2yv9KbUM5hblEybmQxSuEfQ8DfcSvzOhXkZ1KAvLdTLdLe3uq4DFCF8-MY9pwTSka_O_17kdaBqGhkq6VeHgfaOhjYU84ZeA3tFkFJh3jfPtWCtK0nWgdQCHViwuXVZUa9voj-ZnEIsSsNAm9Ge0gOSjPn5jXGi6prI3O_aCxF9UCWXwEHo3rnMFjT6ZuYmCNuxxbJevgFE-yjc23cYbXRKNk72VppUYGSPZ26EK8"/>
 </a>
-<div class="p-6 flex-grow flex flex-col">
-<p class="text-xs uppercase tracking-wider font-semibold text-primary">Mobile App</p>
-<h3 class="mt-2 text-lg font-heading font-bold text-[#F5F5F5]">
-<a class="hover:text-primary transition-colors" href="/project/mobile-loyalty-app">Mobile Loyalty App</a>
-</h3>
-<p class="mt-1 text-sm text-white/70">Designed for a Cafe Chain</p>
+<div class="p-6">
+<h3 class="text-xl font-heading font-bold text-contrast">Mobil Sadakat Uygulaması</h3>
+<p class="text-sm text-primary font-medium mt-1">Uygulama Geliştirme</p>
+<p class="text-sm text-contrast/80 mt-2">Bölgesel Kahve Zinciri</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="py-20 sm:py-24 bg-black/20" id="contact">
+<section class="py-20 sm:py-24 bg-white" id="contact">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div class="flex flex-col gap-4">
-<h2 class="text-3xl lg:text-4xl font-heading font-bold text-[#F5F5F5]">Let’s Build Something Great Together</h2>
-<p class="text-base">Have a project in mind or just want to learn more? We'd love to hear from you. Reach out and let's start the conversation.</p>
+<h2 class="text-3xl lg:text-4xl font-heading font-bold text-contrast">Birlikte Harika Bir Şey Inşa Edelim</h2>
+<p class="text-base text-contrast/80">Aklınızda bir proje mi var yoksa sadece daha fazla bilgi edinmek mi istiyorsunuz? Sizden haber almak isteriz. Bize ulaşın ve konuşmaya başlayalım.</p>
 <div class="mt-4 flex flex-col gap-4">
-<a class="flex items-center gap-3 text-[#F5F5F5] hover:text-primary transition-colors" href="mailto:info@sdnsoftware.com">
+<a class="flex items-center gap-3 text-contrast hover:text-primary transition-colors" href="mailto:info@sdnsoftware.com">
 <span class="material-symbols-outlined text-primary">mail</span>
 <span>info@sdnsoftware.com</span>
 </a>
-<div class="flex items-center gap-3 text-[#F5F5F5]">
+<div class="flex items-center gap-3 text-contrast">
 <span class="material-symbols-outlined text-primary">location_on</span>
 <span data-location="Antalya, Turkey">Antalya, Turkey</span>
 </div>
@@ -194,36 +180,35 @@
 </div>
 <form class="w-full space-y-4">
 <div>
-<label class="sr-only" for="name">Name</label>
-<input class="w-full bg-background-dark border-white/20 rounded-lg h-12 px-4 text-[#F5F5F5] placeholder:text-white/50 focus:border-primary focus:ring-primary/50 transition" id="name" name="name" placeholder="Your Name" type="text"/>
+<label class="sr-only" for="name">İsim</label>
+<input class="w-full bg-background-light border-contrast/20 rounded-lg h-12 px-4 text-contrast placeholder:text-contrast/50 focus:border-primary focus:ring-primary/50 transition" id="name" name="name" placeholder="İsim" type="text"/>
 </div>
 <div>
 <label class="sr-only" for="email">Email</label>
-<input class="w-full bg-background-dark border-white/20 rounded-lg h-12 px-4 text-[#F5F5F5] placeholder:text-white/50 focus:border-primary focus:ring-primary/50 transition" id="email" name="email" placeholder="Your Email" type="email"/>
+<input class="w-full bg-background-light border-contrast/20 rounded-lg h-12 px-4 text-contrast placeholder:text-contrast/50 focus:border-primary focus:ring-primary/50 transition" id="email" name="email" placeholder="Email" type="email"/>
 </div>
 <div>
-<label class="sr-only" for="message">Message</label>
-<textarea class="w-full bg-background-dark border-white/20 rounded-lg p-4 text-[#F5F5F5] placeholder:text-white/50 focus:border-primary focus:ring-primary/50 transition" id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+<label class="sr-only" for="message">Mesaj</label>
+<textarea class="w-full bg-background-light border-contrast/20 rounded-lg p-4 text-contrast placeholder:text-contrast/50 focus:border-primary focus:ring-primary/50 transition" id="message" name="message" placeholder="Mesaj" rows="5"></textarea>
 </div>
 <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-sm font-bold tracking-wide transition-transform duration-300 hover:scale-105" type="submit">
-<span>Send Message</span>
+<span>Mesaj Gönder</span>
 </button>
 </form>
 </div>
 </section>
 </main>
-<footer class="bg-black/40">
+<footer class="bg-contrast">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
 <div class="flex items-center gap-2">
 <div class="size-5 text-primary">
 <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path></svg>
 </div>
-<span class="text-sm">© 2024 SDN. All Rights Reserved.</span>
+<span class="text-sm text-white/70">© 2025 SEDEN Software. All Rights Reserved.</span>
 </div>
 <div class="flex items-center gap-4">
 </div>
 </div>
 </footer>
 </div>
-
 </body></html>
