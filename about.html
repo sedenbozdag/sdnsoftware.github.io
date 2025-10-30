@@ -42,25 +42,20 @@
 <body class="font-display bg-background-light dark:bg-background-dark text-text-primary dark:text-text-primary-dark">
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200/80 dark:border-gray-800/80 px-4 md:px-8 lg:px-10 py-3 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<div class="flex items-center gap-4">
-<div class="size-6 text-text-primary dark:text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
-</svg>
+<header class="sticky top-0 z-50 w-full contrast/80 backdrop-blur-sm">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3">
+
+<a class="text-contrast text-xl font-heading font-bold" href ="index.html">SEDEN</a>
 </div>
-<h2 class="text-xl font-bold tracking-[-0.015em]">SDN</h2>
-</div>
-<nav class="hidden md:flex flex-1 justify-center gap-8">
-<a class="text-sm font-medium" href="#">Home</a>
-<a class="text-sm font-medium" href="#">Products</a>
-<a class="text-sm font-bold text-primary dark:text-primary" href="#">About Us</a>
-<a class="text-sm font-medium" href="#">Contact</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="about.html">Hakkımda</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="services.html">Servisler</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="projects.html">Projeler</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="contact.html">İletişim</a>
 </nav>
-<div class="flex items-center justify-end">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-text-primary dark:bg-background-light text-background-light dark:text-text-primary text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Request a Demo</span>
-</button>
+</div>
 </div>
 </header>
 <main class="flex-grow">

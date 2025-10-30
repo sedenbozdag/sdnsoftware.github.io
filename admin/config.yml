@@ -1,11 +1,12 @@
+# admin/config.yml
+# Repo'yu kendi repo adınla değiştir (aşağıda örnek repo var).
 backend:
-  name: github
-  repo: sedensoftware/sedensoftware.github.io  # GitHub repo adını yaz
+  name: git-gateway
   branch: main
 
 publish_mode: simple
 
-media_folder: "images/uploads"  # Görsellerin yükleneceği yer
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -17,6 +18,8 @@ collections:
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
       - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Özet", name: "summary", widget: "text", required: false }
+      - { label: "Kapak Görseli", name: "thumbnail", widget: "image", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
   - name: "projects"
@@ -26,5 +29,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Proje Adı", name: "title", widget: "string" }
-      - { label: "Açıklama", name: "body", widget: "markdown" }
-      - { label: "Bağlantı", name: "url", widget: "string", required: false }
+      - { label: "Kısa Açıklama", name: "description", widget: "text" }
+      - { label: "Bağlantı (URL)", name: "url", widget: "string", required: false }
+      - { label: "Görsel", name: "image", widget: "image", required: false }
+      - { label: "Detaylar", name: "body", widget: "markdown" }
