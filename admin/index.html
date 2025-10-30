@@ -2,21 +2,15 @@
 <html lang="tr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Admin Panel</title>
-    <!-- Decap CMS (eski Netlify CMS) -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <title>Yönetici Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <!-- Decap CMS otomatik olarak /admin/config.yml dosyasını arar -->
     <script>
-      // Eğer CMS otomatik yüklenmezse manuel başlatma isteğe bağlı:
-      if (window.CMS && window.CMS.init) {
-        // CMS otomatik yüklenir; ekstra ayar gerekmez
-        // console.log("Decap CMS yüklendi");
-      } else {
-        console.error("Decap CMS yüklenemedi — internet bağlantınızı veya script yolunu kontrol edin.");
-      }
+      console.log("Decap CMS yükleniyor...");
+    </script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
+            onerror="console.error('Decap CMS yüklenemedi — internet bağlantınızı veya script yolunu kontrol edin.');">
     </script>
   </body>
 </html>
