@@ -1,77 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Panel</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f5f5f5;
-    }
-    #login-container {
-      text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      background-color: #0072f5;
-      color: white;
-      border-radius: 5px;
-    }
-    button:hover {
-      opacity: 0.9;
-    }
-  </style>
-</head>
-<body>
-  <div id="login-container">
-    <h1>Admin Panel</h1>
-    <p>Lütfen giriş yapın veya davet linkinizle şifre oluşturun.</p>
-    <button id="login-btn">Login / Sign Up</button>
-  </div>
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yönetici Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <noscript>Bu paneli kullanmak için JavaScript etkin olmalıdır.</noscript>
 
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    // Identity init
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.init(); // Init en başta
-
-      window.netlifyIdentity.on("login", user => {
-        document.location.href = "/admin"; // Giriş sonrası sayfada kal
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
+        script.onload = () => console.log("✅ Decap CMS başarıyla yüklendi.");
+        script.onerror = () =>
+          console.error("❌ Decap CMS yüklenemedi — internet bağlantınızı veya script yolunu kontrol edin.");
+        document.body.appendChild(script);
       });
-
-      window.netlifyIdentity.on("logout", () => {
-        document.location.href = "/admin"; // Çıkış sonrası sayfada kal
-      });
-
-      // Davet/onay token varsa otomatik aç
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has("t")) {
-        window.netlifyIdentity.open();
-      }
-    }
-
-    // Buton ile widget açma
-    document.addEventListener("DOMContentLoaded", () => {
-      const loginBtn = document.getElementById("login-btn");
-      if (loginBtn) {
-        loginBtn.addEventListener("click", () => {
-          window.netlifyIdentity.open();
-        });
-      }
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
