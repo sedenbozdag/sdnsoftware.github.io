@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create New Post</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A90E2",
+                        "background-light": "#F4F6F8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<div class="flex flex-col border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark w-64 p-4 shrink-0">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Abstract gradient logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhT92OB0TkvoRTUngKi0iIt2WRswi43IMIqFbYKA1suwrXh7iBZMjfOsihP1tBSQOdIcrGubBVKHyGd2Ri-pdW_TUBiaN2XRodILztDdnCGrm1dRlHSnPcJekuWZDlVUPsEIlxy10qfiWJDiNOsoEeCJhXtkb02d7qzYCG4DWmWe0nSsn7r9--zlNy6pRfs3fVeZ9Q9zA0jlHBJ3m9aWKhmQ_T-_COMM54hI1MCXTb8MzkebVHEwqNdLOm2uhFkM3SbWdQ6ZJURriC");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#111418] dark:text-white text-base font-medium leading-normal">Admin Panel</h1>
+<p class="text-[#617289] dark:text-gray-400 text-sm font-normal leading-normal">Blog Management</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<div class="flex items-center gap-3 px-3 py-2 text-[#617289] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">article</span>
+<p class="text-sm font-medium leading-normal">Content</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#617289] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">group</span>
+<p class="text-sm font-medium leading-normal">Users</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#617289] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">pie_chart</span>
+<p class="text-sm font-medium leading-normal">Analytics</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#617289] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</div>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 text-[#617289] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">help_outline</span>
+<p class="text-sm font-medium leading-normal">Help Center</p>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto">
+<div class="p-8 max-w-7xl mx-auto w-full">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4 items-center mb-8">
+<p class="text-[#333333] dark:text-white text-3xl font-bold leading-tight">Create New Post</p>
+<div class="flex items-center gap-3">
+<button class="min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-[#333333] dark:text-white text-sm font-medium leading-normal hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate">Save as Draft</span>
+</button>
+<button class="min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal hover:bg-primary/90 transition-colors">
+<span class="truncate">Publish Post</span>
+</button>
+</div>
+</div>
+<!-- Two-column layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Content -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- TextField for Title -->
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+<label class="flex flex-col w-full">
+<p class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2">Post Title</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-lg font-normal leading-normal" placeholder="Enter your blog post title here" value=""/>
+</label>
+</div>
+<!-- Composer -->
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm flex-grow">
+<div class="flex flex-col h-full">
+<div class="p-6 border-b border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-[#333333] dark:text-gray-300"><span class="material-symbols-outlined text-xl">format_bold</span></button>
+<button class="flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-[#333333] dark:text-gray-300"><span class="material-symbols-outlined text-xl">format_italic</span></button>
+<button class="flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-[#333333] dark:text-gray-300"><span class="material-symbols-outlined text-xl">format_list_bulleted</span></button>
+<button class="flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-[#333333] dark:text-gray-300"><span class="material-symbols-outlined text-xl">format_list_numbered</span></button>
+<button class="flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-[#333333] dark:text-gray-300"><span class="material-symbols-outlined text-xl">link</span></button>
+<button class="flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-[#333333] dark:text-gray-300"><span class="material-symbols-outlined text-xl">image</span></button>
+</div>
+</div>
+<div class="flex-grow">
+<textarea class="form-input w-full h-full min-h-[400px] resize-none border-0 focus:ring-0 p-6 text-[#333333] dark:text-gray-200 bg-transparent placeholder:text-gray-400 text-base" placeholder="Start writing your masterpiece..."></textarea>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700 p-4 flex justify-between items-center text-sm">
+<p class="text-gray-500 dark:text-gray-400">Word Count: 0</p>
+<p class="text-gray-500 dark:text-gray-400">Draft saved at 10:15 AM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Metadata -->
+<div class="lg:col-span-1 flex flex-col gap-6">
+<!-- Publishing Card -->
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+<h3 class="text-lg font-semibold text-[#333333] dark:text-white mb-4">Publishing</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1" for="author">Author</label>
+<select class="form-select w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-[#333333] dark:text-white focus:border-primary focus:ring-primary/50" id="author">
+<option>Admin</option>
+<option>Jane Doe</option>
+<option>John Smith</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1" for="publish_date">Publish Date</label>
+<input class="form-input w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-[#333333] dark:text-white focus:border-primary focus:ring-primary/50" id="publish_date" type="date" value="2024-10-26"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Publish Immediately</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/30 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Details Card -->
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+<h3 class="text-lg font-semibold text-[#333333] dark:text-white mb-4">Details</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1" for="tags">Tags</label>
+<input class="form-input w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-[#333333] dark:text-white focus:border-primary focus:ring-primary/50" id="tags" placeholder="Add tags, separated by commas" type="text"/>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-primary/20 text-primary">
+                                            Technology
+                                            <button class="group inline-flex h-3.5 w-3.5 flex-shrink-0 items-center justify-center rounded-full hover:bg-primary/40 focus:outline-none focus:bg-primary/50" type="button">
+<span class="sr-only">Remove</span>
+<svg aria-hidden="true" class="h-2 w-2 stroke-primary" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><path d="M3.5 3.5L12.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+</button>
+</span>
+<span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-primary/20 text-primary">
+                                            Design
+                                            <button class="group inline-flex h-3.5 w-3.5 flex-shrink-0 items-center justify-center rounded-full hover:bg-primary/40 focus:outline-none focus:bg-primary/50" type="button">
+<span class="sr-only">Remove</span>
+<svg aria-hidden="true" class="h-2 w-2 stroke-primary" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><path d="M3.5 3.5L12.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+</button>
+</span>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Featured Image</label>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-lg">
+<div class="space-y-1 text-center">
+<span class="material-symbols-outlined text-4xl text-gray-400">cloud_upload</span>
+<div class="flex text-sm text-gray-500 dark:text-gray-400">
+<label class="relative cursor-pointer bg-transparent rounded-md font-medium text-primary hover:text-primary/80 focus-within:outline-none" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400">PNG, JPG, GIF up to 10MB</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

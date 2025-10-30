@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Panel - Statistics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#136dec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+              "card-light": "#ffffff",
+              "card-dark": "#182330",
+              "border-light": "#dbe0e6",
+              "border-dark": "#334155",
+              "text-light-primary": "#111418",
+              "text-dark-primary": "#f8fafc",
+              "text-light-secondary": "#617289",
+              "text-dark-secondary": "#94a3b8"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        font-size: 24px;
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<div class="flex min-h-screen flex-row">
+<!-- SideNavBar -->
+<div class="flex h-full min-h-screen flex-col justify-between border-r border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 w-64 fixed">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Admin avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPXtKVi1oUvogqy63RV2ojbnxeejC-pBQhaha268wFQ5gMLHB_s0Tr836u8vPEMqvGW9IX4VHCD0qh0tlIM5Z16NMn0kghqK3ZNqnJJgTqZC5_Fhdg59bY0WG9gxvCPQ6-8sXL_HK4iPJY74GcxeGNwbXNpBQaeScj2n4sVRegCjkiGkvj-rYnCTJ8bHdl5NF17NoXEhMtrmVVEZIAUwOgEr6fRSH36xgDJNWVLmF1y3f_z_WIqu2jQkm7SNayJobkyxw5Of7Q0xFF");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-base font-semibold leading-normal">Admin Panel</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">admin@example.com</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">dashboard</span>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">folder</span>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Projects</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">article</span>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Blog</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">group</span>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Users</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10" href="#">
+<span class="material-symbols-outlined text-primary font-bold">bar_chart</span>
+<p class="text-primary text-sm font-bold leading-normal">Statistics</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] mb-3">
+<span class="truncate">New Project</span>
+</button>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">settings</span>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">logout</span>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 ml-64 p-8">
+<div class="layout-content-container flex flex-col flex-1">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4 items-center">
+<div class="flex flex-col gap-1">
+<p class="text-text-light-primary dark:text-text-dark-primary text-3xl font-bold leading-tight tracking-tight">Statistics</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-normal leading-normal">An overview of your application's performance.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark px-4">
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Last 30 Days</p>
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary !text-lg">expand_more</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Export Data</span>
+</button>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-6 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-medium leading-normal">Total Users</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-tight text-3xl font-bold leading-tight">12,405</p>
+<p class="text-green-600 dark:text-green-500 text-sm font-medium leading-normal">+5.2%</p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-6 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-medium leading-normal">Active Projects</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-tight text-3xl font-bold leading-tight">86</p>
+<p class="text-green-600 dark:text-green-500 text-sm font-medium leading-normal">+1.5%</p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-6 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-medium leading-normal">Total Blog Views</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-tight text-3xl font-bold leading-tight">250,123</p>
+<p class="text-green-600 dark:text-green-500 text-sm font-medium leading-normal">+12.8%</p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-6 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-medium leading-normal">New Signups</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-tight text-3xl font-bold leading-tight">1,200</p>
+<p class="text-green-600 dark:text-green-500 text-sm font-medium leading-normal">+22.1%</p>
+</div>
+</div>
+<!-- Charts -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+<div class="flex flex-col gap-4 rounded-lg border border-border-light dark:border-border-dark p-6 bg-card-light dark:bg-card-dark">
+<div class="flex flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-lg font-semibold leading-normal">Application Usage</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm">User activity over the last 30 days.</p>
+</div>
+<div class="flex min-h-[240px] flex-1 flex-col justify-end">
+<svg class="h-full w-full" fill="none" preserveaspectratio="none" viewbox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z" fill="url(#chart-gradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#136dec" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="chart-gradient" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#136dec" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#136dec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-around pt-2 border-t border-border-light dark:border-border-dark">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-semibold">Week 1</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-semibold">Week 2</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-semibold">Week 3</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-semibold">Week 4</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border border-border-light dark:border-border-dark p-6 bg-card-light dark:bg-card-dark">
+<div class="flex flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-lg font-semibold leading-normal">Project Progress</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm">Breakdown of projects by status.</p>
+</div>
+<div class="flex-1 flex items-center justify-center min-h-[240px] gap-8">
+<div class="relative w-48 h-48">
+<svg class="w-full h-full" viewbox="0 0 36 36">
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#60a5fa" stroke-dasharray="60, 100" stroke-width="3.8"></path>
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#a78bfa" stroke-dasharray="25, 100" stroke-dashoffset="-60" stroke-width="3.8"></path>
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#fb923c" stroke-dasharray="15, 100" stroke-dashoffset="-85" stroke-width="3.8"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary">86</span>
+<span class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Total</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-blue-400"></div>
+<div>
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">In Progress</p>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">52 projects</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-purple-400"></div>
+<div>
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">Completed</p>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">22 projects</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-orange-400"></div>
+<div>
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">Not Started</p>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">12 projects</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Table Card -->
+<div class="mt-6 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark overflow-hidden">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">Top Referrers</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Traffic sources bringing the most visitors.</p>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left">
+<thead class="border-b border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark">
+<tr>
+<th class="px-6 py-3 text-sm font-semibold text-text-light-secondary dark:text-text-dark-secondary">Source</th>
+<th class="px-6 py-3 text-sm font-semibold text-text-light-secondary dark:text-text-dark-secondary">Visitors</th>
+<th class="px-6 py-3 text-sm font-semibold text-text-light-secondary dark:text-text-dark-secondary">Conversion Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">google.com</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">3,450</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">12.5%</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">twitter.com</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">2,120</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">8.2%</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">github.com</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">1,890</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">10.1%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">dribbble.com</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">980</td>
+<td class="px-6 py-4 text-sm text-text-light-secondary dark:text-text-dark-secondary">5.7%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

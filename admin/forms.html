@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Form Management - Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .active .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111827] dark:text-white">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex h-screen min-h-screen w-64 flex-col border-r border-[#E5E7EB] dark:border-gray-700 bg-white dark:bg-background-dark p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Workspace logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAi92kT4KJ97b8CHizygM3VJmbHhpSAiGHXjwqK36y4ornaq8m3DUS4c_P4ZRxMoZ-yBHJbtzlvPw7FsFJwOQMQmfyWf_ZzUwjHQnAwLGDzXVbMH_jpUUJjaAauLN8x8YMzRtplBn3UGWD5x-U2h9Gwtnzdj59xXOq7kHWB-Nn0iuz7BMlnp1nfjGFBV4QZ1ZHYB2A0mR8DFJHG3tDLILBIHK8Dc1Ay0xJydJIdCcEWnPIXBQo0uUVBHopIhbje5_aexYw_RNfDQBSF");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#111827] dark:text-white text-base font-semibold leading-normal">Admin Panel</h1>
+<p class="text-[#6B7280] dark:text-gray-400 text-sm font-normal leading-normal">Workspace</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-[#111827] dark:text-gray-300">dashboard</span>
+<p class="text-[#111827] dark:text-gray-300 text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary active" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-semibold leading-normal">Forms</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-[#111827] dark:text-gray-300">group</span>
+<p class="text-[#111827] dark:text-gray-300 text-sm font-medium leading-normal">Users</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-[#111827] dark:text-gray-300">settings</span>
+<p class="text-[#111827] dark:text-gray-300 text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-[#111827] dark:text-gray-300">analytics</span>
+<p class="text-[#111827] dark:text-gray-300 text-sm font-medium leading-normal">Analytics</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-[#111827] dark:text-gray-300">help_center</span>
+<p class="text-[#111827] dark:text-gray-300 text-sm font-medium leading-normal">Help Center</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-[#111827] dark:text-gray-300">logout</span>
+<p class="text-[#111827] dark:text-gray-300 text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-[#111827] dark:text-white text-3xl font-bold leading-tight">Form Management</h1>
+<p class="text-[#6B7280] dark:text-gray-400 text-base font-normal leading-normal">Manage, create, and edit your data input forms.</p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined !text-xl">add_circle</span>
+<span class="truncate">Create New Form</span>
+</button>
+</div>
+<!-- SearchBar -->
+<div class="mb-6">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-white dark:bg-gray-800 border border-[#E5E7EB] dark:border-gray-700">
+<div class="text-[#6B7280] dark:text-gray-400 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-[#111827] dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-[#6B7280] dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for forms by name or description..." value=""/>
+</div>
+</label>
+</div>
+<!-- Table -->
+<div class="@container">
+<div class="overflow-hidden rounded-lg border border-[#E5E7EB] dark:border-gray-700 bg-white dark:bg-background-dark">
+<table class="w-full">
+<thead class="bg-background-light dark:bg-gray-800">
+<tr>
+<th class="px-6 py-4 text-left text-[#111827] dark:text-gray-300 text-xs font-semibold uppercase tracking-wider">Form Name</th>
+<th class="px-6 py-4 text-left text-[#111827] dark:text-gray-300 text-xs font-semibold uppercase tracking-wider">Fields</th>
+<th class="px-6 py-4 text-left text-[#111827] dark:text-gray-300 text-xs font-semibold uppercase tracking-wider">Date Created</th>
+<th class="px-6 py-4 text-left text-[#111827] dark:text-gray-300 text-xs font-semibold uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-left text-[#111827] dark:text-gray-300 text-xs font-semibold uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E5E7EB] dark:divide-gray-700">
+<tr class="hover:bg-background-light dark:hover:bg-gray-800/50">
+<td class="px-6 py-4 whitespace-nowrap text-[#111827] dark:text-white text-sm font-medium">User Feedback Survey</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">8</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">2023-10-26</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Active</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-4 text-[#6B7280] dark:text-gray-400">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">edit</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">content_copy</span></a>
+<a class="hover:text-red-500" href="#"><span class="material-symbols-outlined !text-xl">delete</span></a>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-background-light dark:hover:bg-gray-800/50">
+<td class="px-6 py-4 whitespace-nowrap text-[#111827] dark:text-white text-sm font-medium">New Client Onboarding</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">15</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">2023-10-22</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Active</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-4 text-[#6B7280] dark:text-gray-400">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">edit</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">content_copy</span></a>
+<a class="hover:text-red-500" href="#"><span class="material-symbols-outlined !text-xl">delete</span></a>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-background-light dark:hover:bg-gray-800/50">
+<td class="px-6 py-4 whitespace-nowrap text-[#111827] dark:text-white text-sm font-medium">Internal IT Request</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">5</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">2023-09-15</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Draft</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-4 text-[#6B7280] dark:text-gray-400">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">edit</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">content_copy</span></a>
+<a class="hover:text-red-500" href="#"><span class="material-symbols-outlined !text-xl">delete</span></a>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-background-light dark:hover:bg-gray-800/50">
+<td class="px-6 py-4 whitespace-nowrap text-[#111827] dark:text-white text-sm font-medium">Website Contact Form</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">4</td>
+<td class="px-6 py-4 whitespace-nowrap text-[#6B7280] dark:text-gray-400 text-sm">2023-08-01</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Active</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-4 text-[#6B7280] dark:text-gray-400">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">edit</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined !text-xl">content_copy</span></a>
+<a class="hover:text-red-500" href="#"><span class="material-symbols-outlined !text-xl">delete</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center p-4 mt-4">
+<a class="flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">
+<span class="material-symbols-outlined !text-lg">chevron_left</span>
+</a>
+<a class="text-sm font-bold flex size-10 items-center justify-center text-white rounded-full bg-primary" href="#">1</a>
+<a class="text-sm font-normal flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 rounded-full hover:bg-background-light dark:hover:bg-gray-800" href="#">2</a>
+<a class="text-sm font-normal flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 rounded-full hover:bg-background-light dark:hover:bg-gray-800" href="#">3</a>
+<span class="text-sm font-normal flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 rounded-full">...</span>
+<a class="text-sm font-normal flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 rounded-full hover:bg-background-light dark:hover:bg-gray-800" href="#">8</a>
+<a class="text-sm font-normal flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 rounded-full hover:bg-background-light dark:hover:bg-gray-800" href="#">9</a>
+<a class="text-sm font-normal flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 rounded-full hover:bg-background-light dark:hover:bg-gray-800" href="#">10</a>
+<a class="flex size-10 items-center justify-center text-[#111827] dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">
+<span class="material-symbols-outlined !text-lg">chevron_right</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>
