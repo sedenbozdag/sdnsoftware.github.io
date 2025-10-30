@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <noscript>Bu paneli kullanmak için JavaScript etkin olmalıdır.</noscript>
+
     <script>
-      console.log("Decap CMS yükleniyor...");
-    </script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
-            onerror="console.error('Decap CMS yüklenemedi — internet bağlantınızı veya script yolunu kontrol edin.');">
+      document.addEventListener("DOMContentLoaded", function () {
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
+        script.onload = () => console.log("✅ Decap CMS başarıyla yüklendi.");
+        script.onerror = () =>
+          console.error("❌ Decap CMS yüklenemedi — internet bağlantınızı veya script yolunu kontrol edin.");
+        document.body.appendChild(script);
+      });
     </script>
   </body>
 </html>
