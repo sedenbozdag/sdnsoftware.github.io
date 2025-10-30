@@ -1,224 +1,163 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SDN Project: Enterprise CRM Platform</title>
+<title>SDN - Our Projects</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f2b10d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#0A192F",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
 <style>
         .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2C3E50",
+              "accent": "#D4AF37",
+              "background-light": "#F5F5F5",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<div class="flex flex-1 justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5">
-<div class="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
+<div class="flex flex-1 justify-center py-5 sm:px-6 md:px-10 lg:px-20 xl:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
 <!-- TopNavBar -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 py-3">
-<div class="flex items-center gap-4 text-primary">
-<div class="size-6">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 dark:border-white/10 px-4 sm:px-6 lg:px-10 py-4">
+<div class="flex items-center gap-4 text-primary dark:text-white">
+<div class="size-6 text-accent">
 <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
 </svg>
 </div>
-<a class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"href="homepage.html">SEDEN</h2>
+<h2 class="text-primary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">SDN</h2>
 </div>
-<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex flex-1 justify-end gap-8">
 <div class="flex items-center gap-9">
-<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Services</a>
-<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Projects</a>
-<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">About</a>
-<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+<a class="text-primary/70 dark:text-white/70 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-primary/70 dark:text-white/70 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">About</a>
+<a class="text-primary/70 dark:text-white/70 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Services</a>
+<a class="text-primary dark:text-white text-sm font-bold leading-normal relative" href="#">Projects<span class="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-accent"></span></a>
+<a class="text-primary/70 dark:text-white/70 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#0A192F] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
-<span class="truncate">Get a Quote</span>
-</button>
-</div>
-<button class="md:hidden text-white">
-<span class="material-symbols-outlined text-3xl">menu</span>
+</nav>
+<button class="md:hidden text-primary dark:text-white">
+<span class="material-symbols-outlined">menu</span>
 </button>
 </header>
-<main class="flex flex-col gap-10 md:gap-16 mt-8">
-<!-- Breadcrumbs -->
-<div class="flex flex-wrap gap-2 px-4">
-<a class="text-white/50 hover:text-white/80 text-sm font-medium leading-normal transition-colors" href="#">Home</a>
-<span class="text-white/50 text-sm font-medium leading-normal">/</span>
-<a class="text-white/50 hover:text-white/80 text-sm font-medium leading-normal transition-colors" href="#">Projects</a>
-<span class="text-white/50 text-sm font-medium leading-normal">/</span>
-<span class="text-white text-sm font-medium leading-normal">Enterprise CRM Platform</span>
-</div>
-<!-- HeaderImage -->
-<div class="w-full">
-<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[400px]" data-alt="Abstract hero image for a CRM platform project, showing stylized charts and user interface elements." style='background-image: linear-gradient(0deg, rgba(10, 25, 47, 0.8) 0%, rgba(10, 25, 47, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPo7K1kE94xl9xwGef058LoEqgweHfMFQM2AlX_UMO7_rq9d2XsNgiocgRNv7qsNAesTxm_MVg97MNfNq1g1nxoiZXTA1tpT7CCgDSVMsyL9DjgtorH1xW2Us8SfvJjc3jQy8P4Trckr6cYtfHg2gkZG9QJKa7mPVL_kFy6eVOS0ZLbxXV9m3_qqviPsOLrafeLPrwYw_SoiRf3gYY1t_lupo5CPWHPIlAlp3nr0DCNuWEhH8fL5lAr4VtY9PPZLu3x7HAxb4jFwI");'>
-<div class="flex p-6 md:p-8"><h1 class="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tighter">Enterprise CRM Platform for FinCorp</h1></div>
+<main class="flex flex-col gap-6 p-4 sm:p-6 lg:p-10">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4">
+<div class="flex flex-col gap-3">
+<p class="text-primary dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Our Projects</p>
+<p class="text-primary/70 dark:text-white/70 text-base font-normal leading-normal max-w-2xl">
+                                    Explore our portfolio of innovative solutions, crafted with precision and passion to drive results for our clients. We turn complex challenges into elegant software.
+                                </p>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-4">
-<div class="md:col-span-2 flex flex-col gap-10">
-<!-- The Job Section -->
-<div>
-<h2 class="text-primary text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">The Job</h2>
-<p class="text-white/80 text-base font-normal leading-relaxed pb-3 pt-1">
-                                      A brief summary of the project's goals, outlining the core objectives and the value delivered to FinCorp through the development of a bespoke enterprise-level Customer Relationship Management platform.
-                                    </p>
-<p class="text-white/80 text-base font-normal leading-relaxed pb-3 pt-1">
-                                      Our team was tasked with creating a scalable, secure, and intuitive CRM from the ground up. The solution needed to integrate with existing financial systems, automate complex workflows, and provide data-driven insights to sales and marketing teams, ultimately enhancing customer relationships and driving business growth.
-                                    </p>
+<!-- Chips / Filter Bar -->
+<div class="flex gap-2 p-3 flex-wrap pr-4">
+<div class="flex h-9 cursor-pointer shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white pl-4 pr-4 shadow-sm">
+<p class="text-sm font-medium leading-normal">All</p>
 </div>
-<!-- Designed For Whom Section -->
-<div>
-<h2 class="text-primary text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Designed For Whom</h2>
-<p class="text-white/80 text-base font-normal leading-relaxed pb-3 pt-1">
-                                      FinCorp is a leading financial services provider struggling with fragmented customer data and inefficient manual processes. Their target audience for this platform includes internal sales executives, account managers, and marketing specialists who require a unified view of the customer journey to provide personalized and timely service.
-                                    </p>
+<div class="flex h-9 cursor-pointer shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-primary/20 text-primary dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/40 transition-colors pl-4 pr-4">
+<p class="text-sm font-medium leading-normal">Mobile App</p>
+</div>
+<div class="flex h-9 cursor-pointer shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-primary/20 text-primary dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/40 transition-colors pl-4 pr-4">
+<p class="text-sm font-medium leading-normal">Web Software</p>
+</div>
+<div class="flex h-9 cursor-pointer shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-primary/20 text-primary dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/40 transition-colors pl-4 pr-4">
+<p class="text-sm font-medium leading-normal">Digital Transformation</p>
+</div>
+<div class="flex h-9 cursor-pointer shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-primary/20 text-primary dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/40 transition-colors pl-4 pr-4">
+<p class="text-sm font-medium leading-normal">Cloud Solutions</p>
 </div>
 </div>
-<!-- Sidebar Section -->
-<aside class="md:col-span-1">
-<div class="bg-white/5 border border-white/10 rounded-lg p-6 flex flex-col gap-6">
-<div>
-<h3 class="text-primary text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Technologies</h3>
-<div class="flex flex-wrap gap-3">
-<span class="bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">React</span>
-<span class="bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">Node.js</span>
-<span class="bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">PostgreSQL</span>
-<span class="bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">GraphQL</span>
-<span class="bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">Docker</span>
-</div>
-</div>
-<div>
-<h3 class="text-primary text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Services</h3>
-<ul class="flex flex-col gap-2 text-white/80 text-base">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>UI/UX Design</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Web Development</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>API Integration</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Cloud Deployment</li>
-</ul>
-</div>
-<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-4 bg-primary text-[#0A192F] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity mt-2">
-<span class="truncate">View Live Project</span>
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</aside>
-</div>
-<!-- Results Section -->
+<!-- ImageGrid / Project Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group flex flex-col gap-3 pb-3 bg-white dark:bg-primary/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Abstract gradient representing a CRM platform" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnaJUtsYHYg3p6RAWhr8_f7x5qJ9YqgAuN6zehOaKgYsak5d5n_MhNJhuVj3K90m7dtthqOBillYuhRc2QLAFbv3Zr6LP9nwEeZD609ZZ0j4m41ufAvF52m71EoMlquy6psmLGGkfKJvAQBGSbsgYPr9pQzsvAaFpfBLPznB382YqrySL7Q3UtAnnX44VEQndhmd4Qsprc8PCGBCFe8zfxI9qbstPFRDL0aFaCrUFbFapCEYzkGPMaR7DtWaBBNhh4yCdZZml8GsY");'></div>
 <div class="px-4">
-<h2 class="text-primary text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Results &amp; Impact</h2>
-<p class="text-white/80 text-base font-normal leading-relaxed pb-6 pt-1 max-w-4xl">
-                                The new CRM platform transformed FinCorp's operations, centralizing customer data and automating key workflows. This led to measurable improvements in efficiency and customer satisfaction.
-                            </p>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-<div class="bg-white/5 border border-white/10 rounded-lg p-6">
-<p class="text-primary text-5xl font-bold">40%</p>
-<p class="text-white/80 mt-2">Increase in User Engagement</p>
+<p class="text-primary dark:text-white text-base font-bold leading-normal">Enterprise CRM Platform</p>
+<p class="text-primary/70 dark:text-white/70 text-sm font-normal leading-normal">Centralized customer relationship management for Global Logistics Inc.</p>
 </div>
-<div class="bg-white/5 border border-white/10 rounded-lg p-6">
-<p class="text-primary text-5xl font-bold">25%</p>
-<p class="text-white/80 mt-2">Reduction in Report Generation Time</p>
-</div>
-<div class="bg-white/5 border border-white/10 rounded-lg p-6 sm:col-span-2 lg:col-span-1">
-<p class="text-primary text-5xl font-bold">99.9%</p>
-<p class="text-white/80 mt-2">System Uptime &amp; Reliability</p>
+<div class="px-4 mt-auto">
+<span class="text-accent text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">View Project <span class="material-symbols-outlined text-base">arrow_forward</span></span>
 </div>
 </div>
+<div class="group flex flex-col gap-3 pb-3 bg-white dark:bg-primary/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Illustration of cloud servers and data streams" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDwVps8YgWxVsIqt1MuKVY5y4h7YR2U0orvTLy1TR9Y0Flo3vkY_O0vOBbIb6mX3sNISDlmIaUsstsvRU6-Ti2WkAtuhwZIpj7LCMAzznzFpnBvNMsqhckocEMKkZcBg8AHe00KqmQnZ2Rzg0VTTo7r74LldogOFcYkeXHjRngqBmDrS82U0bfuL9PQLgq5okiWPSOwoRsVUCjBfnvQCLmbjjpqNmBsfaaqA_SHlSWmv16epN5on3cGdtW31xiVI-f-WvxWyYWKcc");'></div>
+<div class="px-4">
+<p class="text-primary dark:text-white text-base font-bold leading-normal">Cloud Data Migration</p>
+<p class="text-primary/70 dark:text-white/70 text-sm font-normal leading-normal">Secure cloud infrastructure setup for Fintech Startup Corp.</p>
 </div>
-<!-- Testimonial Section -->
-<div class="px-4 my-8">
-<figure class="bg-transparent border-l-4 border-primary pl-6 md:pl-8">
-<blockquote class="text-white text-xl md:text-2xl italic leading-relaxed">
-                                    “Working with SDN was a game-changer. Their team delivered a platform that not only met our technical requirements but exceeded our expectations in terms of usability and impact on our bottom line.”
-                                </blockquote>
-<figcaption class="text-white/80 mt-4 text-base">
-                                    — Jane Doe, <cite class="not-italic">COO at FinCorp</cite>
-</figcaption>
-</figure>
+<div class="px-4 mt-auto">
+<span class="text-accent text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">View Project <span class="material-symbols-outlined text-base">arrow_forward</span></span>
 </div>
-<!-- CTA Section -->
-<div class="bg-primary/20 rounded-lg p-8 md:p-12 my-10 flex flex-col items-center text-center">
-<h2 class="text-white text-3xl md:text-4xl font-bold">Have a similar project in mind?</h2>
-<p class="text-white/80 mt-4 max-w-2xl">Let's build the next big thing together. Contact us to discuss your ideas and how we can help you achieve your goals.</p>
-<button class="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-[#0A192F] text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
-<span class="truncate">Start Your Project With Us</span>
+</div>
+<div class="group flex flex-col gap-3 pb-3 bg-white dark:bg-primary/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Smartphone displaying a modern banking app interface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaHXt8ZMNiXlLddVrCT8lAwP2NEWvV1elRlCACxsgm1ZC4G56AnuwRsfSQwLS-ONlmzPJC0DprPZwiatJHJuR_2R0bm6ekgx6m_8kkxF5XFmjtg0Ez8nTgsIrnuUWxd_6bxEIKQA7tlowP6oQ-yY6jgYnu7_hlILndl75gALQVhHHL90TAT-Drf6iZtkDoR8XYwEU1m3LkWMbS1YXw_f7O1LKn1YWqHiV_xoW__gIc2IHIZGEUPYIQpK6mP8C3ThzeyhxQTTNRIcg");'></div>
+<div class="px-4">
+<p class="text-primary dark:text-white text-base font-bold leading-normal">Mobile Banking App</p>
+<p class="text-primary/70 dark:text-white/70 text-sm font-normal leading-normal">Secure and intuitive mobile banking for Metro Financial Bank.</p>
+</div>
+<div class="px-4 mt-auto">
+<span class="text-accent text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">View Project <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+</div>
+</div>
+<div class="group flex flex-col gap-3 pb-3 bg-white dark:bg-primary/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Laptop showing a stylish e-commerce website homepage" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIshKiTC1t5qvsWAxPHCp3N1EFJChR0hOmBApL5sA7wXJhGuYvyNA3alDohC-PwilLM0X3GrDmOH9vdsVxeBi6fh4X2GA7vMZIWjmxTej-HCnPo51S6Igf2vNzVphY1qbzmucqMgN_NoJ0-30tTTprtZH7XxbmSzhdiTT63AJuOS9_le39v9RZQLPDymYPYye4VyCPfZVvQwUG86wJEUYUWhrJeTp1wcQNs_rciSEaHU5kI09LMihulXpCUR7j61G7dfFYT9FKpLs");'></div>
+<div class="px-4">
+<p class="text-primary dark:text-white text-base font-bold leading-normal">E-commerce Website</p>
+<p class="text-primary/70 dark:text-white/70 text-sm font-normal leading-normal">Scalable online retail platform for Urban Style Outfitters.</p>
+</div>
+<div class="px-4 mt-auto">
+<span class="text-accent text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">View Project <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+</div>
+</div>
+<div class="group flex flex-col gap-3 pb-3 bg-white dark:bg-primary/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Dashboard showing logistics data and maps" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcEO8mb8S3mR8oSfvNWzuGigpYAPsmP8rYqwMdQC9wfk2sk6Ha9NuGzBRJUqQCQo5MJ0nvhMOFIBj7aIbwz8qdvckjlzI-YMLm33w_Be8QVCYOuot0StMwbOqg_quBasaZl7-NZCY0oPgHxp-L2mwLBByD7u271AyZQcrSsPmEQ504WOKDzgYefHOnlCD0Xva_8HRX9PUaa2co_TW7pwzRJT8JyBn4ca1sqmp7AzsZxQXZSnqPY1kuJrCa1zk0eTo0LvYHgSveR6Y");'></div>
+<div class="px-4">
+<p class="text-primary dark:text-white text-base font-bold leading-normal">Logistics Management System</p>
+<p class="text-primary/70 dark:text-white/70 text-sm font-normal leading-normal">Real-time tracking and optimization for Swift Couriers.</p>
+</div>
+<div class="px-4 mt-auto">
+<span class="text-accent text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">View Project <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+</div>
+</div>
+<div class="group flex flex-col gap-3 pb-3 bg-white dark:bg-primary/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Secure healthcare portal interface on a tablet screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzDx9YSO-l5lqDQqIQ1UecOrCO8YVtujBklA4F9fXt7nxTxQiujwpNcY78rjaeeQhN5Q6jMrybruPfLQBKMx0xWJ8KcXjxE8S1kUpyKrp3EGTVzsRkksYegtsHdX5Szn8jZQoI85-vSGFOTyiHXhoU-yCZfMPEthj9kc6b1RiQ9KDoV4e6CVXXCLWgwViuvb3iR7G0KXWL6Wl2es8CyptiIYsiM5ejOScJtYHtWeGtKLyurga23RtK6FcwKjnf7kC2sXEGqZqP6DU");'></div>
+<div class="px-4">
+<p class="text-primary dark:text-white text-base font-bold leading-normal">Healthcare Patient Portal</p>
+<p class="text-primary/70 dark:text-white/70 text-sm font-normal leading-normal">Secure patient data access for HealthFirst Medical.</p>
+</div>
+<div class="px-4 mt-auto">
+<span class="text-accent text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">View Project <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+</div>
+</div>
+</div>
+<!-- SingleButton -->
+<div class="flex px-4 py-8 justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white dark:bg-primary/20 text-primary dark:text-white/90 text-base font-bold leading-normal tracking-[0.015em] border border-primary/20 hover:bg-primary/5 dark:hover:bg-primary/30 transition-colors">
+<span class="truncate">Load More Projects</span>
 </button>
 </div>
 </main>
-<!-- Footer -->
-<footer class="mt-16 border-t border-solid border-white/10 py-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm px-4">
-<div class="flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path></svg>
-</div>
-<h2 class="text-white text-lg font-bold">SDN</h2>
-</div>
-<p class="text-white/60 leading-relaxed">Crafting digital excellence through innovative software solutions.</p>
-</div>
-<div>
-<h3 class="font-bold text-white mb-4">Quick Links</h3>
-<ul class="flex flex-col gap-2 text-white/60">
-<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Projects</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-bold text-white mb-4">Contact</h3>
-<ul class="flex flex-col gap-2 text-white/60">
-<li><a class="hover:text-primary transition-colors" href="mailto:hello@sdn.com">hello@sdn.com</a></li>
-<li><a class="hover:text-primary transition-colors" href="tel:+1234567890">+1 (234) 567-890</a></li>
-<li class="flex items-start gap-2">123 Innovation Drive, Tech City</li>
-</ul>
-</div>
-<div>
-<h3 class="font-bold text-white mb-4">Follow Us</h3>
-<div class="flex gap-4 text-white/60">
-<a class="hover:text-primary transition-colors" href="#">TW</a>
-<a class="hover:text-primary transition-colors" href="#">LI</a>
-<a class="hover:text-primary transition-colors" href="#">GH</a>
-</div>
-</div>
-</div>
-<div class="mt-8 pt-6 border-t border-solid border-white/10 text-center text-white/40 text-xs px-4">
-<p>© 2024 SDN Technologies Inc. All Rights Reserved.</p>
-</div>
-</footer>
 </div>
 </div>
 </div>
