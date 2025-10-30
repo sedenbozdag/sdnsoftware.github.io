@@ -54,29 +54,21 @@
 <div class="flex flex-1 justify-center px-4 md:px-10 lg:px-20">
 <div class="layout-content-container flex w-full max-w-6xl flex-col flex-1">
 <!-- TopNavBar -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-6 py-4">
-<div class="flex items-center gap-3 text-contrast dark:text-contrast-dark">
-<div class="text-primary">
-<svg class="h-6 w-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
-</svg>
+<header class="sticky top-0 z-50 w-full contrast/80 backdrop-blur-sm">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3">
+
+<a class="text-contrast text-xl font-heading font-bold" href ="index.html">SEDEN</a>
 </div>
-<h2 class="text-xl font-bold leading-tight tracking-tighter">SDN</h2>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="about.html">Hakkımda</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="services.html">Servisler</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="projects.html">Projeler</a>
+<a class="text-contrast text-sm font-medium hover:text-primary transition-colors duration-300" href="contact.html">İletişim</a>
+</nav>
 </div>
-<div class="hidden md:flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-8">
-<a class="text-contrast dark:text-contrast-dark text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-contrast dark:text-contrast-dark text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
-<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="#">Services</a>
-<a class="text-contrast dark:text-contrast-dark text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
 </div>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-contrast dark:bg-contrast-dark text-background-light dark:text-background-dark text-sm font-bold leading-normal tracking-wide hover:bg-opacity-90 dark:hover:bg-opacity-90 transition-colors">
-<span class="truncate">Get a Custom Quote</span>
-</button>
-</div>
-<button class="md:hidden text-contrast dark:text-contrast-dark">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
 </header>
 <main>
 <!-- HeroSection -->
@@ -185,9 +177,11 @@
                     Let's discuss your unique needs and how our expertise can help you achieve your goals.
                   </p>
 <div class="mt-8 flex justify-center">
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-contrast text-base font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
-<span class="truncate">Request a Consultation</span>
-</button>
+  <a href="contact.html">
+    <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-contrast text-base font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
+      <span class="truncate">Request a Consultation</span>
+    </button>
+  </a>
 </div>
 </div>
 </section>
