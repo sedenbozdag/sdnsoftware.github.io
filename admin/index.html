@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel</title>
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     body {
       font-family: sans-serif;
@@ -43,18 +41,13 @@
     <button id="login-btn">Login / Sign Up</button>
   </div>
 
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    // Netlify Identity başlat
+    // Identity init
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          console.log("No user logged in yet");
-        } else {
-          console.log("User is logged in:", user);
-        }
-      });
+      window.netlifyIdentity.init(); // Init en başta
 
-      // Login sonrası yönlendirme
       window.netlifyIdentity.on("login", user => {
         document.location.href = "/admin"; // Giriş sonrası sayfada kal
       });
@@ -62,19 +55,21 @@
       window.netlifyIdentity.on("logout", () => {
         document.location.href = "/admin"; // Çıkış sonrası sayfada kal
       });
+
+      // Davet/onay token varsa otomatik aç
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("t")) {
+        window.netlifyIdentity.open();
+      }
     }
 
     // Buton ile widget açma
-    document.getElementById("login-btn").addEventListener("click", () => {
-      window.netlifyIdentity.open();
-    });
-
-    // Sayfa yüklendiğinde davet/onay token varsa otomatik aç
-    window.addEventListener("load", () => {
-      window.netlifyIdentity.init();
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has("t")) {
-        window.netlifyIdentity.open(); // token varsa widget otomatik aç
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginBtn = document.getElementById("login-btn");
+      if (loginBtn) {
+        loginBtn.addEventListener("click", () => {
+          window.netlifyIdentity.open();
+        });
       }
     });
   </script>
